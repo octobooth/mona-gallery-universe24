@@ -1,0 +1,13 @@
+on: [push]
+
+jobs:
+  pylint:
+    runs-on: ubuntu-latest
+    name: "pylint"
+    steps:
+      - uses: davidslusser/actions_python_pylint@v1.0.0
+        with:
+          src: "src"
+          options: "--cov=src"
+          pip_install_command: "pip install -e .[dev]"
+          python_version: "3.9"
