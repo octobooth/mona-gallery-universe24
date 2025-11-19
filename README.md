@@ -3,7 +3,8 @@
 <p align="center">
   <a href="#introduction">Introduction</a> •
   <a href="#prerequisites">Prerequisites</a> •
-  <a href="#mona-gallery">Mona Gallery</a> •  
+  <a href="#mona-gallery">Mona Gallery</a> •
+  <a href="#metrics-dashboard">Metrics Dashboard</a> •  
   <a href="#license">License</a> •
   <a href="#maintainers">Maintainers</a> •
   <a href="#support">Support</a> •
@@ -34,6 +35,17 @@ The application's frontend is built with Vue.js 3 and Bootstrap 5, while authori
 
 
 ![image](./repo-utils/images/architecture-diagram.png)
+
+## Metrics Dashboard
+
+The Mona Gallery application tracks various metrics about galleries and art pieces. For detailed information about accessing and analyzing these metrics, see the [Metrics Dashboard Documentation](./METRICS_DASHBOARD.md).
+
+Key metrics available include:
+- Gallery statistics (total galleries, creation dates, activity)
+- Art piece analytics (total pieces, star ratings, upload types)
+- User engagement tracking (recent updates, popular content)
+
+The documentation provides guidance on accessing metrics through the web interface, REST API, or directly from the database.
 
 ## License 
 
