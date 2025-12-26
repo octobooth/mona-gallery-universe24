@@ -48,7 +48,7 @@ public class BlobController {
             // var path = String.format("%s/%s", profile.name, id.toString());
             var path = String.format("%s", id);
 
-                System.out.format(id + "-local", path );
+                System.out.format("%s-local", id);
 
             var stat = minio.statObject(
                 StatObjectArgs
