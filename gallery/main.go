@@ -657,7 +657,7 @@ func authnMiddleware(next http.Handler) http.Handler {
 
 		if strings.HasPrefix(authz, "Bearer") {
 			tokenString := strings.TrimSpace(strings.TrimPrefix(authz, "Bearer"))
-			log.Printf("AuthN: Received bearer token %s", tokenString)
+			log.Printf("AuthN: Received bearer token %s", maskToken(tokenString))
 			token, err := jwt.ParseWithClaims(tokenString, &OctoClaims{}, func(token *jwt.Token) (interface{}, error) {
 				// Don't forget to validate the alg is what you expect:
 				//if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
@@ -669,13 +669,13 @@ func authnMiddleware(next http.Handler) http.Handler {
 			})
 
 			if err != nil {
-				log.Printf("AuthN: Invalid token %s", err)
+				log.Printf("AuthN: Invalid token")
 				http.Error(w, "Forbidden", http.StatusForbidden)
 				return
 			}
 
 			if claims, ok := token.Claims.(*OctoClaims); ok && token.Valid {
-				log.Printf("AuthN: Received valid token %s", authz)
+				log.Printf("AuthN: Received valid token")
 
 				log.Printf("AuthN: Adding %s %s", GitHubLoginHeader, claims.Profile.Login)
 				r.Header.Add(GitHubLoginHeader.String(), claims.Profile.Login)
