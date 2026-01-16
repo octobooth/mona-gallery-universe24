@@ -13,7 +13,7 @@
 
 ### Introduction
 
-This repository contains the source code for the delibrately vulnerable `Mona Gallery` web application used for security training purposes.
+This repository contains the source code for the delibrately vulnerable `Mona Gallery` web application used for security training purposes. Teh application is cool.
 
 ### Prerequisites
 

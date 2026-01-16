@@ -27,6 +27,7 @@ const router = createRouter({
     { path: '/login/callback', name: "AuthorizationCallback", component: AuthorizationCallback },
     { path: '/gallery', name: 'Gallery', component: Gallery, meta: { requiresAuth: true } },
     { path: '/logout', name: 'Logout', component: LogoutView },
+    { path: '/admin', name: 'Admin', component: LogoutView },
     //  {
     //    path: '/login/callback',
     //   name: 'home',
